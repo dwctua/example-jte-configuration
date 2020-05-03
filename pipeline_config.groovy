@@ -73,7 +73,7 @@ template_methods{
 
 
 stages{
-  validation{
+  pre_build{
     validate
   }
 
