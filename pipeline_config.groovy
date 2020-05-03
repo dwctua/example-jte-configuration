@@ -60,12 +60,16 @@ template_methods{
     static_code_analysis
 }  
 
+*/
+
+
+
 stages{
   pre_build{
     validate
-    generate
   }
-  build{
+  build{    
+    generate
     unit_test
     build
   }
@@ -73,10 +77,6 @@ stages{
     static_code_analysis
   }
 }
-*/
-
-
-
 
 libraries{
   merge = true 
