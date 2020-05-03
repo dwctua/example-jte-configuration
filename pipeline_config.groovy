@@ -36,8 +36,6 @@ libraries{
     merge = true
 }
     
-    
-*/
 
 // restrict individual repository Jenkinsfiles
 allow_scm_jenkinsfile = false
@@ -60,7 +58,9 @@ template_methods{
     unit_test
     build  
     static_code_analysis
-}
+}    
+*/
+
 
 stages{
   pre-build{
