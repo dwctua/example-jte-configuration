@@ -12,14 +12,14 @@ libraries{
 
 stages {
   pre-build {
-     validate()
-    generate()
+    validate
+    generate
   }
   build {
-    unit_test()
-    build()
+    unit_test
+    build
   }
   post-build{
-    static_code_analysis()
+    static_code_analysis
   }
 }
