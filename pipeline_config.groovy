@@ -59,7 +59,12 @@ template_methods{
     build  
     static_code_analysis
 }  
+stages{
+  pre_build{
+    validate
+  }
 
+}
   build{    
     generate
     unit_test
@@ -72,12 +77,7 @@ template_methods{
 
 
 
-stages{
-  pre_build{
-    validate
-  }
 
-}
 
 libraries{
   merge = true 
