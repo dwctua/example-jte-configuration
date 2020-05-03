@@ -1,3 +1,4 @@
+validation()
 generate()
 unit_test()
 build()
