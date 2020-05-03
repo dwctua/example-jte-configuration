@@ -39,13 +39,35 @@ libraries{
     
 */
 
+// restrict individual repository Jenkinsfiles
+allow_scm_jenkinsfile = false
+// skip the default JTE checkout and do it explicitly
+skip_default_checkout = false
 
-steps {
-  pre-build {
+// define application environment objects
+application_environments{
+    dev{
+        long_name = "Development"
+    }
+    prod{
+        long_name = "Production"
+    }
+}
+
+template_methods{
+    validate
+    generate
+    unit_test
+    build  
+    static_code_analysis
+}
+
+stages{
+  pre-build{
     validate
     generate
   }
-  build {
+  build{
     unit_test
     build
   }
@@ -53,7 +75,6 @@ steps {
     static_code_analysis
   }
 }
-
 
 libraries{
   merge = true 
