@@ -76,7 +76,19 @@ stages{
 */
 
 
-
+stages{
+  pre_build{
+    validate
+    generate
+  }
+  build{
+    unit_test
+    build
+  }
+  post_build{
+    static_code_analysis
+  }
+}
 
 libraries{
   merge = true 
