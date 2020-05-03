@@ -1,3 +1,5 @@
-pre_build()
-build()
-post_build()
+template{
+  pre_build()
+  build()
+  post_build()
+}
