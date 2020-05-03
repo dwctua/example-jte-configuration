@@ -1,5 +1,13 @@
-validate()
-generate()
-unit_test()
-build()
-static_code_analysis()
+stages {
+  pre-build {
+     validate()
+    generate()
+  }
+  build {
+    unit_test()
+    build()
+  }
+  post-build{
+    static_code_analysis()
+  }
+}
