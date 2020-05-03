@@ -60,14 +60,7 @@ template_methods{
     static_code_analysis
 }  
 
-  build{    
-    generate
-    unit_test
-    build
-  }
-  linter{
-    static_code_analysis
-  }
+
 */
 
 
@@ -76,7 +69,14 @@ stages{
   pre_build{
     validate
   }
-
+  build{    
+    generate
+    unit_test
+    build
+  }
+  post_build{
+    static_code_analysis
+  }
 }
 
 libraries{
