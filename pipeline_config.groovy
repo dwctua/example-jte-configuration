@@ -65,7 +65,7 @@ template_methods{
 
 
 stages{
-  pre_build{
+  validation{
     validate
   }
   build{    
@@ -73,7 +73,7 @@ stages{
     unit_test
     build
   }
-  post_build{
+  linter{
     static_code_analysis
   }
 }
