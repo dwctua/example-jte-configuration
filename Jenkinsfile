@@ -1,3 +1,5 @@
+@Library('jenkins-pipeline-shared-lib-sample')_
+
 /*
 validate()
 generate()
