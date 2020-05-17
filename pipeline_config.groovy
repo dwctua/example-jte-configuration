@@ -83,4 +83,5 @@ libraries{
   merge = true 
   validation
   sonarqube
+  utils
 }
